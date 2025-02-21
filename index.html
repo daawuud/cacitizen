@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Citizenship Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Canadian Citizenship Eligibility For PR</h1>
+        
+        <p>Enter your PR Start Date:</p>
+        <input type="date" id="prDate">
+        <button onclick="calculateInitialDates()">Calculate</button>
+
+        <div id="initialResults" class="hidden">
+            <h2>End of 5-Year Period: <span id="end5Years"></span></h2>
+            <h3>Earliest Citizenship Eligibility Date: <span id="citizenshipDate"></span></h3>
+            <h3>Days Passed Since PR Date: <span id="daysPassed"></span></h3>
+            <h3>Total Days Left to Become a Citizen (Without Travel Days): <span id="totalDaysLeft"></span></h3>
+        </div>
+
+        <h2>Travel Outside Canada</h2>
+        <p>Enter the number of times you traveled outside Canada:</p>
+        <input type="number" id="travelCount" min="0" value="0">
+        <button onclick="generateTravelInputs()">Enter Travel Details</button>
+
+        <div id="travelInputs"></div>
+        <button id="calculateFinalBtn" class="hidden" onclick="calculateFinalDays()">Calculate Final Days</button>
+
+        <div id="finalResult" class="hidden">
+            <h2>Total Days Spent Outside Canada: <span id="totalTravelDays"></span></h2>
+            <h3>Updated Days Remaining for Citizenship: <span id="daysRemaining"></span></h3>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
